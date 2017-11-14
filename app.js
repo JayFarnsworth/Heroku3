@@ -1,4 +1,5 @@
 const express = require('express');
+var app = express();
 const cors = require('cors');
 var students = [{
   id: 1,
@@ -26,6 +27,14 @@ var students = [{
   lastName: "Veritas",
   homeTown: "Wichita"
 }];
+function idFind(data, id){
+  for (let i=0;i<data.length;i++){
+    if (data[i].id == id){
+      return data[i];
+    }
+  }
+  return null;
+}
 app.get('/', function (request, response) {
   response.json({students});
 });
@@ -39,6 +48,7 @@ app.get('/:id', function (request, response) {
       }
     });
   }
-  response.json({students; idFound});
+  response.json({students: idFound});
 });
 app.listen(process.env.PORT || 3000);
+module.exports = app;
