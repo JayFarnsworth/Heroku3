@@ -41,7 +41,7 @@ app.get('/', function (request, response) {
 app.get('/:id', function (request, response) {
   var idFound = idFind(students, request.params.id);
   if (!idFound){
-    response.status = (404);
+    response.status(404);
     response.json({
       error: {
         message: 'No record found!'
