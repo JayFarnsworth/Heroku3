@@ -52,4 +52,4 @@ Your returned error should look like this:
     }
 }
 ```
-Heroku link: https://dashboard.heroku.com/apps/whispering-lake-51428/deploy/github
+Heroku link: https://whispering-lake-51428.herokuapp.com/
